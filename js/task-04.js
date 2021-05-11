@@ -6,18 +6,21 @@ const refs = {
 	incrButton: document.querySelector('[data-action="increment"]'),
 };
 
+let resultWorksBtn = 0;
 
 refs.incrButton.addEventListener('click', onIncrement);
 refs.decrButton.addEventListener('click', onDecrement);
 
+
 function onIncrement() {
-	if (Number(refs.counterValue.textContent) >= 0) {
-		refs.counterValue.textContent = Number(refs.counterValue.textContent) + 1;
-	}
+	resultWorksBtn += 1;
+	refs.counterValue.textContent = `${resultWorksBtn}`;
+	
 };
 
 function onDecrement() {
-	if (Number(refs.counterValue.textContent) > 0) {
-		refs.counterValue.textContent = Number(refs.counterValue.textContent) - 1;
-	}
+	resultWorksBtn -= 1;
+	refs.counterValue.textContent = `${resultWorksBtn}`;
+
 };
+
