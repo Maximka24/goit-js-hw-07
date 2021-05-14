@@ -11,8 +11,9 @@ function onInputChange(event) {
 	
 
 	if (checkInputValue === `${refs.input.value}`) {
-		return refs.nameLabel.textContent = 'незнакомец';		
+		refs.nameLabel.textContent = 'незнакомец';
+		return;
 	}	
 	refs.nameLabel.textContent = event.currentTarget.value;
-	
+			
 }
